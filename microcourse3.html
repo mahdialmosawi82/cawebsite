@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Module</title>
+    <link rel="stylesheet" href="css/microcourse1.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="CreateAccess Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="header-button">Home</a></li>
+                <li><a href="course.html" class="header-button">Courses</a></li>
+                <li><a href="about.html" class="header-button">About Us</a></li>
+                <li><a href="contact.html" class="header-button">Contact</a></li>
+                <li><a href="donate.html" class="header-button">Donate</a></li>
+                <li><a href="https://store.epicgames.com/en-US/" class="header-button">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Go Back Button -->
+    <div class="back-button-container">
+        <a href="microcourse.html" class="back-button">Go Back</a>
+    </div>
+
+    <!-- About This Course Section -->
+    <section class="about-course">
+        <a id="module-guide" href="foundational.html" class="module-guide-btn">FOUNDATIONAL CONTENT</a>
+        <h1>Build a Museum Experience in Unreal Editor for Fortnite</h1>
+        <h2>About this Course:</h2>
+        <p>
+            Learn how to construct a building using ready-made assets available in UEFN. Then, build illuminated displays to showcase your models. Finally, configure pop-up dialog and audio devices to provide information about the models when approached by a Fortnite player. The skills in this microcourse can be used to create different kinds of interactive 3D experiences - you can showcase your art, music, favorite possessions, family heirlooms, and more. 
+        </p>
+    </section>
+
+    <!-- Modules Section -->
+    <main>
+        <section class="modules-section">
+            <h2>Course Modules</h2>
+            <div class="module-navigation">
+                <button class="module-btn active" onclick="loadModule(1)">1</button>
+                <button class="module-btn" onclick="loadModule(2)">2</button>
+                <button class="module-btn" onclick="loadModule(3)">3</button>
+                
+            </div>
+
+            <div class="module-content">
+                <h3 id="module-title">MODULE 1: CONSTRUCT A BUILDING IN UEFN</h3>
+                <div class="module-video">
+                    <iframe id="module-video" src="https://www.youtube.com/embed/example1" title="YouTube video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <p id="module-description">
+                    This lesson provides step-by-step guidelines for creating 3D models using the Polycam phone app, and
+                    tips for ensuring high-quality models.
+                </p>
+                <a id="module-guide" href="https://static.showit.co/file/oOxeSwgVLAzLCTOG5h48CQ/208098/construct_a_building_in_uefn_learning_guide.pdf" class="module-guide-btn">Get the Detailed Guide</a>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    // Module data
+    const modules = {
+        1: {
+            title: "MODULE 1: CONSTRUCT A BUILDING IN UEFN",
+            video: "https://www.youtube.com/embed/_xqtXl9P11c?si=UGsDla0OROElZ8AH",
+            description: "This lesson provides guidelines for making a building using pre-made items in the Fortnite library. ",
+            guideLink: "#"
+        },
+        2: {
+            title: "MODULE 2:BUILD ILLUMINATED DISPLAYS FOR 3D MODELS IN UEFN",
+            video: "https://www.youtube.com/embed/V7KC1RM3f1k?si=RLfh8SSdoKnHXmUc",
+            description: "This lesson helps creators build displays for photogrammetry or other 3D models on their islands and add light features to them.",
+            guideLink: "https://static.showit.co/file/EJRbuF3b_b4O6R6HAVahpQ/208098/build_illuminated_displays_for_3d_models_in_uefn_learning_guide.pdf"
+        },
+        3: {
+            title: "MODULE 3: CONNECT POP UP DIALOG DEVICES AND AUDIO FILES TO ASSETS IN UEFN",
+            video: "https://www.youtube.com/embed/I3miUyap2Lk?si=4A8gIHyvv4COtL0U",
+            description: "This lesson enables creators to provide information about models and other assets on their Fortnite island using Pop-Up Dialog Devices and Audio Players. Creators will be able to configure these devices to provide written details about an asset on Pop-Up Dialog Boxes, or to play an audio file of their choosing upon approach by the player.",
+            guideLink: "https://static.showit.co/file/MTUd6dFlnmjiITs4RRvN2w/208098/connect_pop-up_dialog_devices_and_audio_files_to_assets_in_uefn_learning_guide.pdf"
+        },
+    };
+
+    // Function to load a module dynamically
+    function loadModule(moduleNumber) {
+        document.getElementById("module-title").textContent = modules[moduleNumber].title;
+        document.getElementById("module-video").src = modules[moduleNumber].video;
+        document.getElementById("module-description").textContent = modules[moduleNumber].description;
+        document.getElementById("module-guide").href = modules[moduleNumber].guideLink;
+
+        const buttons = document.querySelectorAll(".module-btn");
+        buttons.forEach((button, index) => {
+            button.classList.toggle("active", index === moduleNumber - 1);
+        });
+    }
+</script>
+
+</html>
+
+

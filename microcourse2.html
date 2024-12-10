@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Module</title>
+    <link rel="stylesheet" href="css/microcourse1.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="CreateAccess Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="header-button">Home</a></li>
+                <li><a href="course.html" class="header-button">Courses</a></li>
+                <li><a href="about.html" class="header-button">About Us</a></li>
+                <li><a href="contact.html" class="header-button">Contact</a></li>
+                <li><a href="donate.html" class="header-button">Donate</a></li>
+                <li><a href="https://store.epicgames.com/en-US/" class="header-button">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Go Back Button -->
+    <div class="back-button-container">
+        <a href="microcourse.html" class="back-button">Go Back</a>
+    </div>
+
+    <!-- About This Course Section -->
+    <section class="about-course">
+	<a id="module-guide" href="foundational.html" class="module-guide-btn">FOUNDATIONAL CONTENT</a>
+        <h1>Bring Real-World Creations to Fortnite with Unreal Editor and Photogrammetry</h1>
+        <h2>About this Course:</h2>
+        <p>
+            This course is designed to guide creators through the essential steps of using photogrammetry and Unreal
+            Editor for Fortnite to bring real-world elements into the game environment.
+            It consists of comprehensive lessons that provide detailed, step-by-step guidance on building 3D models,
+            importing them into Fortnite, and refining their geometry using advanced tools in Unreal Editor.
+            Each lesson is aimed at helping creators learn practical techniques for creating high-quality models,
+            positioning and scaling them within a virtual landscape, and fine-tuning their structure for optimal
+            presentation and functionality.
+        </p>
+    </section>
+
+    <!-- Modules Section -->
+    <main>
+        <section class="modules-section">
+            <h2>Course Modules</h2>
+            <div class="module-navigation">
+                <button class="module-btn active" onclick="loadModule(1)">1</button>
+                <button class="module-btn" onclick="loadModule(2)">2</button>
+                <button class="module-btn" onclick="loadModule(3)">3</button>
+                <button class="module-btn" onclick="loadModule(4)">4</button>
+            </div>
+
+            <div class="module-content">
+                <h3 id="module-title">MODULE 1: CREATE A 3D MODEL USING POLYCAM</h3>
+                <div class="module-video">
+                    <iframe id="module-video" src="https://www.youtube.com/embed/example1" title="YouTube video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <p id="module-description">
+                    This lesson provides step-by-step guidelines for creating 3D models using the Polycam phone app, and
+                    tips for ensuring high-quality models.
+                </p>
+                <a id="module-guide" href="https://static.showit.co/file/BLIfObhURJiNLJsC1qBomQ/208098/bring_the_real_world_to_fortnite_lesson_1_create_a_3d_model_using_polycam.pdf" class="module-guide-btn">Get the Detailed Guide</a>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    // Module data
+    const modules = {
+        1: {
+            title: "MODULE 1: CREATE A 3D MODEL USING POLYCAM",
+            video: "https://www.youtube.com/embed/iK6xaM2WMlg?si=8a_eo4l9HeaXdZL_",
+            description: "This lesson provides step-by-step guidelines for creating 3D models using the Polycam phone app, and tips for ensuring high-quality models.",
+            guideLink: "https://static.showit.co/file/BLIfObhURJiNLJsC1qBomQ/208098/bring_the_real_world_to_fortnite_lesson_1_create_a_3d_model_using_polycam.pdf"
+        },
+        2: {
+            title: "MODULE 2: IMPORT 3D MODELS INTO A FORTNITE ISLAND USING UEFN",
+            video: "https://www.youtube.com/embed/vmV0UPvAg5Q?si=VTVs1zSBkENHVDDf",
+            description: "This lesson provides step-by-step guidelines for importing 3D models into a Fortnite island using UEFN.",
+            guideLink: "https://static.showit.co/file/Sdo6j9YNT66N-0IgAjcmrw/208098/bring_the_real_world_to_fortnite_lesson_2_import_3d_models_into_a_fortnite_island_using_uefn.pdf"
+        },
+        3: {
+            title: "MODULE 3:  EDIT A PHOTOGRAMMETRY MODEL'S GEOMETRY USING UEFN",
+            video: "https://www.youtube.com/embed/k3sBXGjCMJg?si=1VGNy5iackRMaHeZ",
+            description: "Learn how to add realistic textures to your 3D models to bring them to life in Unreal Engine.",
+            guideLink: "https://static.showit.co/file/PMARC_IFRRmmrlxSlSeajQ/208098/bring_the_real_world_to_fortnite_lesson_3_edit_a_photogrammetry_models_geometry_using_uefn1.pdf"
+        },
+	4: {
+            title: "ALTERNATIVE LESSON: EDIT A PHOTOGRAMMETRY MODEL'S GEOMETRY USING BLENDER",
+            video: "https://www.youtube.com/embed/RCRzv0_LMHc?si=O2OSEfbFV93EPliZ",
+            description: "Blender is a free, open source 3D creation suite that can allow you to edit photogrammetry models for use in a 3D experience. Some creators may prefer to edit their 3D models in Blender prior to importing them into Unreal Editor for Fortnite or another 3D experience on another platform. This lesson provides step-by-step guidance for using three approaches to editing a photogrammetry model's geometry using Blender.",
+            guideLink: "https://static.showit.co/file/650ZZSDAR62UE0EQPMyxGg/208098/bring_the_real_world_to_fortnite_alternative_lesson_edit_a_photogrammetry_model_s_geometry_using_blender.pdf"
+        },
+
+    };
+
+    // Function to load a module dynamically
+    function loadModule(moduleNumber) {
+        document.getElementById("module-title").textContent = modules[moduleNumber].title;
+        document.getElementById("module-video").src = modules[moduleNumber].video;
+        document.getElementById("module-description").textContent = modules[moduleNumber].description;
+        document.getElementById("module-guide").href = modules[moduleNumber].guideLink;
+
+        const buttons = document.querySelectorAll(".module-btn");
+        buttons.forEach((button, index) => {
+            button.classList.toggle("active", index === moduleNumber - 1);
+        });
+    }
+</script>
+
+</html>
+
+

@@ -1,0 +1,257 @@
+/* General Reset */
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a,
+button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #052555, #7f27bd);
+    color: white;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #052555;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.header-button {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #366bb5;
+    border-radius: 50px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.header-button.active {
+    background-color: #6a0dad;
+}
+
+.header-button:hover {
+    background-color: #6a0dad;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.welcome-container {
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-button {
+    padding: 0.7rem 2rem;
+    font-size: 1.5rem;
+    background: linear-gradient(to right, #7ac74f, #3da8f5);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    cursor: default;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Courses Section */
+.courses-section {
+    text-align: center;
+    margin: 4rem auto;
+    flex: 3;
+    /* Pushes footer down */
+}
+
+.course-button {
+    display: block;
+    margin: 2rem auto;
+    padding: 1.5rem 3rem;
+    font-size: 2.5rem;
+    background:  #2597c5;
+    color: rgb(7, 7, 7);
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 80%;
+    height: 80%;
+    max-width: 800px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.course-button:hover {
+    background: #4c1178;
+}
+
+/* Footer Container */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #4c1178;
+    padding: 2rem 4rem;
+    color: white;
+    position: relative;
+    /* Required for positioning the logo */
+    margin-top: auto;
+    /* Pushes the footer to the bottom of the page */
+}
+
+/* Footer Links Column */
+.footer-links ul {
+    list-style: none;
+    /* Removes dots/bullets */
+    padding: 0;
+    /* No padding */
+    margin: 0;
+    /* No margin */
+}
+
+.footer-links ul li {
+    margin: 0.5rem 0;
+    /* Adds spacing between items */
+}
+
+.footer-links ul li a {
+    color: white;
+    /* Ensures links are white */
+    text-decoration: none;
+    /* Removes underline */
+    font-size: 0.9rem;
+    font-weight: 500;
+    /* Optional: Makes text slightly bold for visibility */
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+    /* Adds underline only on hover */
+}
+
+/* Stay Connected Column */
+.footer-column.stay-connected {
+    text-align: center;
+    flex: 1;
+}
+
+.footer-column.stay-connected h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.subscription-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.subscription-form input {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.subscription-form button {
+    padding: 0.5rem 1rem;
+    background-color: #7ac74f;
+    color: #4c1178;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subscription-form button:hover {
+    background-color: #4c1178;
+    color: white;
+}
+
+/* Footer Logo */
+.footer-logo {
+    position: absolute;
+    bottom: 1rem;
+    /* Ensures logo is positioned at the bottom */
+    right: 1rem;
+    /* Aligns logo to the right */
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 100px;
+    height: auto;
+}
+
+/* General Footer Adjustments */
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    text-align: center;
+    margin: 1rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column p,
+.footer-column ul {
+    margin-top: 2rem;
+}
+
+.icons img {
+    width: 30px;
+    height: auto;
+}
+
+/* Force Footer to Stay at the Bottom of the Page */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensures the body takes up the full height of the viewport */
+}
+
+main {
+    flex: 1;
+    /* Pushes the footer to the bottom */
+}

@@ -1,0 +1,196 @@
+/* General Reset */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+a,
+button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure the page spans the full height */
+html,
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background:  #0d326a;
+    color: white;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #0d326a;
+}
+
+header .logo img {
+    height: 150px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.header-button {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #5e9aed;
+    border-radius: 80px;
+    transition: background-color 0.3s ease;
+}
+
+.header-button:hover {
+    background-color: #6a0dad;
+}
+
+/* About This Course Section */
+.about-course {
+    padding: 1rem;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-course h1 {
+    margin-top: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: rgb(31, 225, 225);
+    margin-bottom: 1rem;
+}
+
+.about-course h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #fb2929;
+}
+
+.about-course p {
+    font-size: 1.5rem;
+    line-height: 2;
+    color: #e0e0e0;
+}
+
+/* Modules Section */
+.modules-section {
+    padding: 2rem;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.modules-section h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.module-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.module-btn {
+    background-color: #3fd4f6;
+    color: rgb(7, 7, 7);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.module-btn.active {
+    background-color: #6a0dad;
+}
+
+.module-btn:hover {
+    background-color: #6a0dad;
+}
+
+.module-content {
+    background:#2c6fd3;
+    color: #123b78;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.module-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: black;
+}
+
+.module-content iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.module-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #fcf8f8;
+}
+
+.module-guide-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #3da8f5;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.module-guide-btn:hover {
+    background-color: #00378a;
+}
+
+/* Back Button */
+.back-button-container {
+    margin: 1rem 2rem;
+}
+
+.back-button {
+    text-decoration: none;
+    background-color: #366bb5;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #6a0dad;
+}

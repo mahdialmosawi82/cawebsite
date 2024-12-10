@@ -1,0 +1,336 @@
+/* General Reset */
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a,
+button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #00378a, #6a0dad);
+    color: white;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #00378a;
+}
+
+header .logo img {
+    height: 150px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.header-button {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    background: #366bb5;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.header-button.active {
+    background: #6a0dad;
+}
+
+.header-button:hover {
+    background: #6a0dad;
+}
+
+/* Microcourses Hub Section */
+.microcourses-hub {
+    text-align: calc();
+    margin: 2rem auto;
+    padding: 3rem;
+    background: linear-gradient(to bottom, #19519e, #6a0dad);
+    border-radius: 80px;
+    width: 80%;
+    height: 60%;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.oval-container {
+    display: flex;
+    align-items: center;
+    
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.microcourses-text {
+    flex: 1;
+    text-align: left;
+    padding: 2rem;
+    color: white;
+    line-height: 2;
+}
+
+.microcourses-heading {
+    margin-bottom: 1rem;
+}
+
+.microcourses-tag {
+    background: #2597c5;
+    color: white;
+    border: none;
+    padding: 0.5rem 3rem;
+    font-size: 4rem;
+    font-weight: bold;
+    border-radius: 70px;
+    cursor: default;
+    
+}
+
+.start-learning {
+    margin: 3rem;
+    padding: 0.5rem 2rem;
+    background: #9ff273;
+    color: rgb(16, 1, 1);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.start-learning:hover {
+    background: #4c1178;
+    color: white;
+}
+
+.get-uefn {
+    margin-top: 1.5rem;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(to right, #3da8f5, #7ac74f);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.get-uefn:hover {
+    background: #3da8f5;
+    color: white;
+}
+
+.microcourses-image {
+    flex: 1;
+}
+
+.microcourses-image img {
+    border-radius: 60%;
+    width: 850px;
+    height: 600px;
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Fundamental Learning Section */
+.fundamentals {
+    margin-top: 3rem;
+    padding: 3rem 1rem;
+    text-align: center;
+    margin-bottom: 8rem;
+}
+
+.line-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.line {
+    width: 300px;
+    height: 3px;
+    background: #7ac74f;
+}
+
+.fundamentals h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.fundamentals p {
+    font-size: 1rem;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 4fr);
+    gap: 4rem;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+
+}
+
+.resource {
+    display: flex;
+    flex-direction: column;
+    align-items: calc();
+    border: 1px solid #ddd;
+
+    justify-content: flex-start;
+    padding: 2rem;
+    width: 80%;
+    background: linear-gradient(to bottom, #1c75c3, #7123a9);
+    border-radius: 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.resource-button {
+    padding: 0.5rem 1rem;
+    background: linear-gradient(to right, #3da8f5, #7ac74f);
+    color: white;
+    border: none;
+    border-radius: 70px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 100%;
+    align-items: center;
+}
+
+.resource-button:hover {
+    background: #4c1178;
+    color: white;
+}
+
+.image-container {
+    margin: 2rem 0;
+}
+
+.image-container img {
+    max-width: 200px;
+    border-radius: 20px;
+}
+
+.guide-link {
+    font-size: 2rem;
+    color: #000b13;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-weight: bolder;
+}
+
+.guide-link:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Footer */
+.footer {
+    margin-top: 1rem;
+    background: #4c1178;
+    padding: 2rem 1rem;
+    position: relative;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.footer-column {
+    text-align: center;
+    flex: 1;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.icons img {
+    width: 20px;
+    height: auto;
+}
+
+/* Footer Links */
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin: 0.5rem 0;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Subscription Form */
+.subscription-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.subscription-form input {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.subscription-form button {
+    padding: 0.5rem 1rem;
+    background-color: #7ac74f;
+    color: #4c1178;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subscription-form button:hover {
+    background-color: #4c1178;
+    color: white;
+}

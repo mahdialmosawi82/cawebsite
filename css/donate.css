@@ -1,0 +1,278 @@
+/* General Reset */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+a,
+input,
+textarea,
+button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #00378a, #591e84);
+    /* Blue to purple blend */
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #00378a;
+}
+
+header .logo img {
+    height: 150px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.header-button {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #366bb5;
+    border-radius: 80px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.header-button.active {
+    background-color: #802fb9;
+}
+
+.header-button:hover {
+    background-color: #6a0dad;
+}
+
+/* General Form Styling */
+.donation-content {
+    display: flex;
+    /* Makes text and form appear side by side */
+    flex-wrap: wrap;
+    /* Allows stacking on smaller screens */
+    gap: 30px;
+    /* Space between the form and text */
+    align-items: flex-start;
+    /* Aligns items to the top */
+    justify-content: space-between;
+    /* Ensures space is balanced between elements */
+    margin-top: 20px;
+}
+
+.donation-text {
+    flex: 2;
+    max-width: 500px;
+    background: linear-gradient(to bottom, #1f64b3, #72359d);
+
+    /* Light background color for the box */
+    border: 1px solid #ddd;
+    /* Light border */
+    border-radius: 10px;
+    /* Slightly rounded corners */
+    padding: 20px;
+    /* Add spacing inside the box */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Optional: Adds subtle shadow */
+    color: #555;
+    /* Text color */
+    margin-left: 300px;
+    margin-top: 100px;
+}
+
+#read-more-btn {
+    background-color: #366bb5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#read-more-btn:hover {
+    background-color: #00378a;
+}
+
+#more {
+    display: none;
+}
+
+.donation-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.donation-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: white;
+}
+
+
+.donation-form {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 200px;
+    margin-top: 100px;
+    background: linear-gradient(to bottom, #1f64b3, #72359d);
+
+
+}
+
+/* Label Styling */
+.donation-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Input and Text Field Styling */
+.donation-form input[type="number"],
+.donation-form input[type="text"],
+.donation-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Input Focus Effect */
+.donation-form input:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styling */
+.donate-button {
+    padding: 1rem 1rem;
+    background: linear-gradient(to right, #3da8f5, #7ac74f);
+    color: white;
+    border: none;
+    border-radius: 70px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 100%;
+    align-items: center;
+}
+
+.donate-button:hover {
+    background-color: #00378a;
+}
+
+/* Optional: Form Container Styling */
+.donation-form-section {
+    text-align: center;
+    margin: 50px auto;
+}
+
+
+/* Footer */
+.footer {
+    background: #4c1178;
+    padding: 2rem 1rem;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    text-align: center;
+    flex: 1;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin: 0.5rem 0;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.subscription-form {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.subscription-form input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.subscription-form button {
+    padding: 0.5rem 1rem;
+    background: #7ac74f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.icons img {
+    width: 30px;
+    height: auto;
+    margin: 0 0.5rem;
+}
+
+/* Footer Logo */
+.footer-logo {
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 100px;
+    height: auto;
+}
+
+.email-address {
+    padding: 10px 0;
+}

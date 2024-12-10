@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - CreateAccess</title>
+    <link rel="stylesheet" href="css/donate.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="CreateAccess Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="header-button">Home</a></li>
+                <li><a href="course.html" class="header-button">Course</a></li>
+                <li><a href="about.html" class="header-button">About Us</a></li>
+                <li><a href="contact.html" class="header-button">Contact</a></li>
+                <li><a href="donate.html" class="header-button active">Donate</a></li>
+                <li><a href="https://store.epicgames.com/en-US/" class="header-button">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="donation-section">
+            <div class="oval-container">
+                <div class="donation-content">
+                    <div class="donation-text">
+                        <h2>Support CreateAccess</h2>
+                        <p id="donation-text-content">
+                            Thank you for considering a donation to help us broaden access to 3D creation! Donations bring microcourses to more schools and community programs, and help us build new microcourse content for beginners. 
+                            <span id="dots">...</span><span id="more" style="display:none;"> Please contact Executive Director Liz Dailey at liz@createaccess.org if you have questions, if you are considering a gift of $10,000 or more, or if you would like to discuss recommending a grant to CreateAccess through your Donor-Advised Fund. CreateAccess is currently registered to accept charitable contributions from residents of Pennsylvania and Maryland. Arizona, Delaware, Idaho, Indiana, Iowa, Montana, Nebraska, South Dakota, Vermont, and Wyoming do not require registration to accept charitable contributions. If you are a resident of one of the states not listed here and wish to support CreateAccess, please contact Liz Dailey prior to making a donation so the necessary registration can be completed, if any. </span>
+                        </p>
+                        <button id="read-more-btn" onclick="toggleText()">Read More</button>
+                    </div>
+                    
+                    <script>
+                        function toggleText() {
+                            var dots = document.getElementById("dots");
+                            var moreText = document.getElementById("more");
+                            var btnText = document.getElementById("read-more-btn");
+                
+                            if (moreText.style.display === "none") {
+                                moreText.style.display = "inline";
+                                dots.style.display = "none";
+                                btnText.innerHTML = "Read Less"; // Change the button text to "Read Less"
+                            } else {
+                                moreText.style.display = "none";
+                                dots.style.display = "inline";
+                                btnText.innerHTML = "Read More"; // Change the button text back to "Read More"
+                            }
+                        }
+                    </script>
+
+
+
+                    <form action="#" method="POST" class="donation-form">
+                    <label for="donation-amount">Donation Amount</label>
+                    <input type="number" id="donation-amount" name="donation-amount" placeholder="Enter amount in USD" min="1" required>
+    
+                    <label for="donor-name">Name (Optional)</label>
+                    <input type="text" id="donor-name" name="donor-name" placeholder="Your name">
+    
+                    <label for="donor-email">Email (Optional)</label>
+                    <input type="email" id="donor-email" name="donor-email" placeholder="Your email">
+    
+                    <button type="submit" class="donate-button">Donate Now</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-columns">
+            <div class="footer-column social-links">
+                <h3>Follow</h3>
+                <div class="icons">
+                    <img src="images/twitter.png" alt="Twitter">
+                    <img src="images/facebook.png" alt="Facebook">
+                    <img src="images/youtube.png" alt="YouTube">
+                    <img src="images/instagram.png" alt="Instagram">
+                </div>
+                <p>&copy; CreateAccess, 2024</p>
+            </div>
+
+            <div class="footer-column footer-links">
+                <ul>
+                    <li><a href="#">Microcourse Hub</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Donate</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column stay-connected">
+                <h3>Stay Connected</h3>
+                <div class="subscription-form">
+                    <input type="email" placeholder="Enter your email to subscribe">
+                    <button type="submit">&#9658;</button>
+                </div>
+                <p class="email-address"> hello@createaccess.org</p>
+                <p>By entering your email, you agree to be contacted by CreateAccess.</p>
+            </div>
+        </div>
+        
+    </footer>
+</body>
+
+</html>
